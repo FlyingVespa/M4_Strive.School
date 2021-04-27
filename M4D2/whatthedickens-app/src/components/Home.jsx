@@ -1,0 +1,61 @@
+import React from "react";
+import { Carousel, Col, Container, Row, Card } from "react-bootstrap";
+
+import fantasy from "../json/fantasy.json";
+import history from "../json/history.json";
+import horror from "../json/horror.json";
+import romance from "../json/romance.json";
+import scifi from "../json/scifi.json";
+import Desc from "../components/Desc.jsx";
+
+let categories = [fantasy, horror, history, romance, scifi];
+
+class Home extends React.Component {
+  state = {
+    selectedBook: categories[0],
+  };
+
+  render() {
+    return (
+      <Container>
+        <Row className="justify-content-center mt-3">
+          <Col sx={12} md={6}>
+            <h1>List Of Books</h1>
+            {categories.map((books) => {
+              return (
+                <Card>
+                  {books.map((book) => (
+                    <Carousel.Item
+                      key={book.asin}
+                      onClick={() => this.setState({ selectedBook: book })}
+                    >
+                      <img
+                        className="d-block w-100"
+                        src={book.img}
+                        alt="First-Book"
+                      />
+                      <Carousel.Caption>
+                        <h3>{book.title}</h3>
+                        <p>{book.asin}</p>
+                        <h4>{book.price}</h4>
+                        <h4>{book.catagory}</h4>
+                      </Carousel.Caption>
+                    </Carousel.Item>
+                  ))}
+                  ;
+                </Card>
+              );
+            })}
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <Desc book={this.state.selectedBook} />
+          </Col>
+        </Row>
+      </Container>
+    );
+  }
+}
+
+export default Home;
