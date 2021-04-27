@@ -16,6 +16,15 @@ This module is about how to use REACT library for .
  - Classes - *Featured, but not explained in depth. To be touched on later.*
 
 ### M4D2
+Resource files: https://github.com/FlyingVespa/M4_Strive.School/tree/main/M4D2/whatthedickens-app
+
+*Delved into classes and states*
+- Made first app
+Homework Brief = Create a bookstore using JSON files (supplied) & Components. Should include :
+- Navbar
+- Jumbotron
+- Footer
+- Use one JSON to display all books on page
 ### M4D3
 ### M4D4
 ### M4D5
