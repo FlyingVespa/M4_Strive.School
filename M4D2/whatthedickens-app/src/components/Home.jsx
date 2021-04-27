@@ -23,7 +23,7 @@ class Home extends React.Component {
             <h1>List Of Books</h1>
             {categories.map((books) => {
               return (
-                <Card>
+                <Carousel>
                   {books.map((book) => (
                     <Carousel.Item
                       key={book.asin}
@@ -43,7 +43,7 @@ class Home extends React.Component {
                     </Carousel.Item>
                   ))}
                   ;
-                </Card>
+                </Carousel>
               );
             })}
           </Col>
