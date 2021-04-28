@@ -1,37 +1,37 @@
-// import React from "react";
-// import { Carousel, Col, Container, Row, Card } from "react-bootstrap";
+import React from "react";
+import { Carousel, Col, Container, Row, Card } from "react-bootstrap";
 
-// import fantasy from "../json/fantasy.json";
-// import history from "../json/history.json";
-// import horror from "../json/horror.json";
-// import romance from "../json/romance.json";
-// import scifi from "../json/scifi.json";
 
-// let categories = [fantasy, horror, history, romance, scifi];
+let categories = [fantasy, horror, history, romance, scifi];
 
-// class HomeCopy extends React.Component {
+class HomeCopy extends React.Component {
 
-//   render()
-//   return (
-//       <Container>
-//       <Row className="justify-content-center mt-3">
-//       </Row>
-//       </Container>
-//         <Col sx={12} md={6}>
-//           <h1>List Of Books</h1>
-//           {categories.map((books) => { return(
-//         <Card>
-//   <Card.Header as="h5">Featured</Card.Header>
-//   <Card.Body>
-//     <Card.Title>Special title treatment</Card.Title>
-//     <Card.Text>
-//       With supporting text below as a natural lead-in to additional content.
-//     </Card.Text>
-//     <Button variant="primary">Go somewhere</Button>
-//   </Card.Body>
-// </Card>
-// );
-// })}
-// </Col>
-// );
-// }
+  render()
+  return (
+    <Row>
+          
+    (placeholder).map((book) => (
+      <Col>
+        <Card
+          key={book.asin}
+          onClick={() => this.setState({ selectedBook: book })}
+          className="h-100 w-100"
+        >
+          <img
+            className="d-block w-100"
+            src={book.img}
+            alt="First-Book"
+          />
+          <Card.Body>
+            <h3>{book.title}</h3>
+            <p>{book.asin}</p>
+            <h4>{book.price}</h4>
+            <h4>{book.catagory}</h4>
+          </Card.Body>
+        </Card>
+      </Col>
+    ))
+    ;
+  </Row>
+);
+
