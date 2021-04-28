@@ -1,7 +1,16 @@
 import React from "react";
 import { Row, Card, Col } from "react-bootstrap";
+import "../assets/css/card.css";
 
-class Book extends React.Component {
+class SingleBook extends React.Component {
+  state = {
+    selected: false,
+  };
+  selectBook = (e) => {
+    const element = e.currentTarget;
+    element.classList.toggle("selectedCard");
+  };
+
   render() {
     return (
       <Row>
@@ -28,4 +37,4 @@ class Book extends React.Component {
     );
   }
 }
-export default Book;
+export default SingleBook;

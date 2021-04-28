@@ -1,4 +1,3 @@
-import { Navbar, Nav } from "react-bootstrap";
 import "../assets/css/footer.css";
 import Insta from "../assets/img/insta.png";
 import Github from "../assets/img/github.png";
