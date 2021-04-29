@@ -1,52 +1,32 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
-import SingleBook from "./SingleBook.jsx";
+import SingleBook from "./singleBookComponent/SingleBook.jsx";
 
-import fantasy from "../json/fantasy.json";
-import history from "../json/history.json";
-import horror from "../json/horror.json";
-import romance from "../json/romance.json";
-import scifi from "../json/scifi.json";
+import Fantasy from "../json/fantasy.json";
+import History from "../json/history.json";
+import Horror from "../json/horror.json";
+import Romance from "../json/romance.json";
+import Scifi from "../json/scifi.json";
 
-let categories = [fantasy, horror, history, romance, scifi];
+let categories = [...Fantasy, ...Horror, ...History, ...Romance, ...Scifi];
 
-class BookList extends React.Component {
-  handleSearchQuery = (searchQuery) => {
-    if (searchQuery) {
-      console.log(searchQuery);
-      let filteredBooks = categories.filter((book) =>
-        book.title.toLowerCase().includes(searchQuery.toLowerCase())
-      );
-      this.setState({ books: filteredBooks.slice(0, 10) });
-      console.log(filteredBooks);
-    } else {
-      this.setState({ books: this.props.genre.slice(0, 10) });
-    }
-  };
-
-  state = {
-    selectedBook: categories[0],
-  };
-
-  render() {
-    return (
-      <Container>
-        <h1 className="text-center">List Of Books</h1>
-        <Row>
-          <h2>HORROR</h2>
-          <SingleBook genre={horror} />
-          <h2>SCIFI</h2>
-          <SingleBook genre={scifi} />
-          <h2>ROMANCE</h2>
-          <SingleBook genre={romance} />
-          <h2>HISTORY</h2>
-          <SingleBook genre={history} />
-          <h2>FANTASY</h2>
-          <SingleBook genre={fantasy} />
-        </Row>
-      </Container>
-    );
-  }
+function BookList() {
+  return (
+    <Container>
+      <h1 className="text-center">List Of Books</h1>
+      <Row>
+        {categories.map((book) => (
+          <SingleBook
+            title={book.title}
+            img={book.img}
+            key={book.asin}
+            // category={this.book.categories}
+            price={book.price}
+          />
+        ))}
+      </Row>
+    </Container>
+  );
 }
 
 export default BookList;

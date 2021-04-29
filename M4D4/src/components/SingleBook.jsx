@@ -1,8 +1,8 @@
 import React from "react";
 import { Row, Card, Col } from "react-bootstrap";
 import "../assets/css/card.css";
-import AddComment from "./AddComment";
-import MyBadge from "./MyBadge";
+import AddComment from "./childComponents/AddComment";
+import MyBadge from "./childComponents/MyBadge";
 
 class SingleBook extends React.Component {
   state = {

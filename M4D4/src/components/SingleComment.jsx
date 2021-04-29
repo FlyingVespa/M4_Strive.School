@@ -2,7 +2,7 @@ import React from "react";
 import { Col, Modal, Button, Container, Row, Form } from "react-bootstrap";
 
 import CommentArea from "./CommentArea.jsx";
-import AddComment from "./AddComment.jsx";
+import AddComment from "./childComponents/AddComment.jsx";
 
 class SingleComment extends React.Component {
   state = {
