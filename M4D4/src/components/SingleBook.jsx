@@ -1,6 +1,7 @@
 import React from "react";
 import { Row, Card, Col } from "react-bootstrap";
 import "../assets/css/card.css";
+import AddComment from "./AddComment";
 import MyBadge from "./MyBadge";
 
 class SingleBook extends React.Component {
@@ -13,6 +14,7 @@ class SingleBook extends React.Component {
   };
 
   render() {
+    <AddComment />;
     return (
       <Row>
         {this.props.genre.map((book) => (

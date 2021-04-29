@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, InputGroup, FormControl } from "react-bootstrap";
 import SingleBook from "./SingleBook.jsx";
+import SingleComment from "./SingleComment.jsx";
 
 import fantasy from "../json/fantasy.json";
 import history from "../json/history.json";
@@ -57,6 +58,15 @@ class BookList extends React.Component {
           <h2>FANTASY</h2>
           <SingleBook genre={fantasy} /> */}
         </Row>
+        <SingleComment
+          type={this.state.type}
+          year={this.state.year}
+          title={this.state.title}
+          image={this.state.image}
+          selected={this.state.selected}
+          show={this.state.modalShow}
+          onHide={() => this.setState({ modalShow: false })}
+        />
       </Container>
     );
   }
