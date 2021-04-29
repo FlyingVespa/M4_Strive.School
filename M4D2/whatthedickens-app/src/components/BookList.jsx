@@ -14,7 +14,7 @@ function BookList() {
   return (
     <Container>
       <h1 className="text-center">List Of Books</h1>
-      <Row>
+      <Row className="m-2 no-gutters">
         {categories.map((book) => (
           <SingleBook
             title={book.title}
