@@ -47,11 +47,11 @@ _Delved into classes and states_
 <details>
 <summary>Main lifecycle events of ReactJS</summary>
 <ul>
-	<li>constructor()</li>
-	<li>Mounting - *componentDidMount()*</li>
-	<li>Unmounting - <em>componentWillUnmount()</em></li>
-	<li>Updating - *componentDidUpdate()*</li>
-	<li>render()</li>
+	<li>constructor() - <em>Mounting</em></li>
+	<li>componentDidMount() - <em>Mounting</em></li>
+	<li>componentWillUnmount() - <em>Unmounting</em></li>
+	<li>componentDidUpdate() - <em>Updating</em></li>
+	<li>render() - <em>Updating</em></li>
 </ul>
 </details>
 <details><summary>Homework Description</summary></details>
