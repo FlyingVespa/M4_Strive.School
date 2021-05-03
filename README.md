@@ -4,7 +4,7 @@ This module is about how to use REACT library for .
 [TOCM]
 
 ### M4D1
-
+<hr>
 <details>
 <summary> *Fullday lecture, no homework. (9-5) Discussed following topics with Stefano Casasola as lecturer* </summary>
 <ul>
@@ -12,7 +12,8 @@ This module is about how to use REACT library for .
 		<ul>
 		<li>versions</li>
 	 	<li>basic packages</li>
-		<li>nodemodules</li>
+		<li>nodemodules</li>bodytone evo 4 review
+
 		<li>yarn</li>
 		<li>a list!</li>
 		</ul>
@@ -23,23 +24,32 @@ This module is about how to use REACT library for .
 	<li> Classes - *Featured, but not explained in depth. To be touched on later.*</li>
 </details>
 
-### M4D2
+### [M4D2](https://github.com/FlyingVespa/M4_Strive.School/tree/main/M4D2/whatthedickens-app)
+<hr>
 
-Resource files: https://github.com/FlyingVespa/M4_Strive.School/tree/main/M4D2/whatthedickens-app
+### <strong>_Delved into Classes</strong> and <strong>States</strong>_
+<details><summary>More details of lesson contents</summary>
+</details>
+<details>
+<summary><strong>Homework Brief:</strong> <em>Create a Bookstore from provided json files</em></summary>
+<ul>
+	<li>Make first React-app</li>
+	<ul>
+		<li>Jumbotron</li>
+		<li>Navbar</li>
+		<li>Footer</li>
+		<li>use provided JSON to display Books</li></ul>
+	</ul>
+</details>
+<details><summary>Completed Homework Screenshot</summary><p align="center"><img src="./M4D2/M4D2_bookstore.png"/></p></details>
 
-_Delved into classes and states_
-
-- Made first app
-  Homework Brief = Create a bookstore using JSON files (supplied) & Components. Should include :
-- Navbar
-- Jumbotron
-- Footer
-- Use one JSON to display all books on page
+![test!](https://github.com/FlyingVespa/M4_Strive.School/blob/main/M4D2/M4D2_bookstore.png)
 
 ### M4D3
+<hr>
 
 ### M4D4
-
+<hr>
 ### [M4D5](https://github.com/magdakolaniak/Netflix-react)
 
 <details><summary>Pair Programming Day - Convert Prevous Netflix project (M3D10) into ReactJS</summary>
@@ -67,15 +77,17 @@ Solo Rework Attempt:
 
 <details>
 <summary>Main lifecycle events of ReactJS</summary>
-><ul>
+<ul>
 	<li>constructor() - <em>Mounting</em></li>
 	<li>componentDidMount() - <em>Mounting</em></li>
 	<li>componentWillUnmount() - <em>Unmounting</em></li>
 	<li>componentDidUpdate() - <em>Updating</em></li>
 	<li>render() - <em>Updating</em></li>
 </ul>
+Created a async API fetch, update state. Movies, using dropdown option to select and mount state. 
 </details>
 <details><summary>Homework Description</summary></details>
+
 ### M4D7
 ### M4D8
 ### M4D9
