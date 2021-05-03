@@ -4,16 +4,23 @@ This module is about how to use REACT library for .
 
 ### M4D1
 *Fullday lecture, no homework. (9-5) Discussed following topics with Stefano Casasola as lecturer*
-- Install/Setup React 
-	 - versions 
-	 - basic packages
-	 - nodemodules
-	 - yarn
- - Componets
- - Props
- - Import/Export
- - States
- - Classes - *Featured, but not explained in depth. To be touched on later.*
+<details>
+<summary>Fullday lecture, no homework. (9-5) Discussed following topics with Stefano Casasola as lecturer</summary>
+<ul>
+	<li>- Install/Setup React</li>
+		<ul>
+		<li>versions</li>
+	 	<li>basic packages</li>
+		<li>nodemodules</li>
+		<li>yarn</li>
+		<li>a list!</li>
+		</ul>
+	<li> Componets</li>
+	<li>Props</li>
+	<li> Import/Export</li>
+	<li>States</li>
+	<li> Classes - *Featured, but not explained in depth. To be touched on later.*</li>
+</details>
 
 ### M4D2
 Resource files: https://github.com/FlyingVespa/M4_Strive.School/tree/main/M4D2/whatthedickens-app
@@ -29,6 +36,18 @@ Homework Brief = Create a bookstore using JSON files (supplied) & Components. Sh
 ### M4D4
 ### M4D5
 ### M4D6
+<details>
+<summary>Main lifecycle events of ReactJS</summary>
+<ul>
+	<li>Constructor</li>
+	<li>componentDidMount</li>
+	<li>componentWillUnmount</li>
+	<li>componentWllUpdate</li>
+
+	<li></li>
+</ul>
+</details>
+<details><summary>Homework Description</summary></details>
 ### M4D7
 ### M4D8
 ### M4D9
