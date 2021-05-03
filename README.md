@@ -57,7 +57,9 @@ In collaboration with:
 
 <em>This (M4D5 inside this repository) folder will be updated by me, to fully comply with homework brief and to 'finish' it. Thus, will differ from original homework, to see homework prior to my updates, click link above</em>
 
-[Alt Text](https://github.com/FlyingVespa/M4_Strive.School/blob/main/M4D5/screencapture%202021-05-01.png)
+Group Attempt:
+<img width="700" src="(https://github.com/FlyingVespa/M4_Strive.School/blob/main/M4D5/screencapture%202021-05-01.png">
+Solo Rework Attempt:
 
 </details>
 
