@@ -44,19 +44,23 @@ _Delved into classes and states_
 
 <details><summary>Pair Programming Day - Convert Prevous Netflix project (M3D10) into ReactJS</summary>
 In collaboration with:
-** Magdalene K - <em>Navbar & Footer</em>
-** Busola - <em>Search/Filter & API</em>
-** Hedri(Me) - <em>Styling/ CSS , ensure project elements sync</em>
-</details><summary>Project Snapshot</summary>
+<ul>
+<li>** Magdalene K - <em>Navbar & Footer</em></li>
+<li>** Busola - <em>Search/Filter & API</em></li>
+<li>** Hedri(Me) - <em>Styling/ CSS , ensure project elements sync</em></li>
+</ul>
+</details>
+
+<details><summary>Project Snapshot</summary>
 [Link to project M4D5](https://github.com/magdakolaniak/Netflix-react)
 <em>This (M4D5 inside this repository) folder will be updated by me, to fully comply with homework brief and to 'finish' it. Thus, will differ from original homework, to see homework prior to my updates, click link above</em>
-<details>
 </details>
+
 ### M4D6
 
 <details>
 <summary>Main lifecycle events of ReactJS</summary>
-<ul>
+><ul>
 	<li>constructor() - <em>Mounting</em></li>
 	<li>componentDidMount() - <em>Mounting</em></li>
 	<li>componentWillUnmount() - <em>Unmounting</em></li>
