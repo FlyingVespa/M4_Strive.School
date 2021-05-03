@@ -8,9 +8,9 @@ import Horror from "../json/horror.json";
 import Romance from "../json/romance.json";
 import Scifi from "../json/scifi.json";
 
-let categories = [...Fantasy, ...Horror, ...History, ...Romance, ...Scifi];
+const BookList = (props) => {
+  let categories = [...Fantasy, ...Horror, ...History, ...Romance, ...Scifi];
 
-function BookList() {
   return (
     <Container>
       <img className="bgBook" src="./book.jpg" alt="" srcset="" />
@@ -28,6 +28,6 @@ function BookList() {
       </Row>
     </Container>
   );
-}
+};
 
 export default BookList;
