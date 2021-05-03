@@ -52,10 +52,13 @@ In collaboration with:
 </details>
 
 <details><summary>Project Details</summary>
-<details>
-<summary>Screenshot of Project</summary>![Alt Text](https://github.com/FlyingVespa/M4_Strive.School/blob/main/M4D5/screencapture%202021-05-01.png)</details>
+
 [Link to project M4D5](https://github.com/magdakolaniak/Netflix-react)
+
 <em>This (M4D5 inside this repository) folder will be updated by me, to fully comply with homework brief and to 'finish' it. Thus, will differ from original homework, to see homework prior to my updates, click link above</em>
+
+[Alt Text](https://github.com/FlyingVespa/M4_Strive.School/blob/main/M4D5/screencapture%202021-05-01.png)
+
 </details>
 
 ### M4D6
