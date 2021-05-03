@@ -40,8 +40,18 @@ _Delved into classes and states_
 
 ### M4D4
 
-### M4D5
+### M4D5(https://github.com/magdakolaniak/Netflix-react)
 
+<details><summary>Pair Programming Day - Convert Prevous Netflix project (M3D10) into ReactJS</summary>
+In collaboration with:
+** Magdalene K - <em>Navbar & Footer</em>
+** Busola - <em>Search/Filter & API</em>
+** Hedri(Me) - <em>Styling/ CSS , ensure project elements sync</em>
+</details><summary>Project Snapshot</summary>
+[Link to project M4D5](https://github.com/magdakolaniak/Netflix-react)
+<em>This (M4D5 inside this repository) folder will be updated by me, to fully comply with homework brief and to 'finish' it. Thus, will differ from original homework, to see homework prior to my updates, click link above</em>
+<details>
+</details>
 ### M4D6
 
 <details>
