@@ -49,7 +49,7 @@ _Delved into classes and states_
 <ul>
 	<li>constructor()</li>
 	<li>Mounting - *componentDidMount()*</li>
-	<li>Unmounting - *componentWillUnmount()*</li>
+	<li>Unmounting - <em>componentWillUnmount()</em></li>
 	<li>Updating - *componentDidUpdate()*</li>
 	<li>render()</li>
 </ul>
