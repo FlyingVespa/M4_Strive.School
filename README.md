@@ -1,11 +1,12 @@
 # MODUEL 4 - Introduction to REACT !
-This module is about how to use REACT library for . 
+
+This module is about how to use REACT library for .
 [TOCM]
 
 ### M4D1
-*Fullday lecture, no homework. (9-5) Discussed following topics with Stefano Casasola as lecturer*
+
 <details>
-<summary>Fullday lecture, no homework. (9-5) Discussed following topics with Stefano Casasola as lecturer</summary>
+<summary> *Fullday lecture, no homework. (9-5) Discussed following topics with Stefano Casasola as lecturer* </summary>
 <ul>
 	<li>- Install/Setup React</li>
 		<ul>
@@ -23,28 +24,34 @@ This module is about how to use REACT library for .
 </details>
 
 ### M4D2
+
 Resource files: https://github.com/FlyingVespa/M4_Strive.School/tree/main/M4D2/whatthedickens-app
 
-*Delved into classes and states*
+_Delved into classes and states_
+
 - Made first app
-Homework Brief = Create a bookstore using JSON files (supplied) & Components. Should include :
+  Homework Brief = Create a bookstore using JSON files (supplied) & Components. Should include :
 - Navbar
 - Jumbotron
 - Footer
 - Use one JSON to display all books on page
+
 ### M4D3
+
 ### M4D4
+
 ### M4D5
+
 ### M4D6
+
 <details>
 <summary>Main lifecycle events of ReactJS</summary>
 <ul>
-	<li>Constructor</li>
-	<li>componentDidMount</li>
-	<li>componentWillUnmount</li>
-	<li>componentWllUpdate</li>
-
-	<li></li>
+	<li>constructor()</li>
+	<li>Mounting - *componentDidMount()*</li>
+	<li>Unmounting - *componentWillUnmount()*</li>
+	<li>Updating - *componentDidUpdate()*</li>
+	<li>render()</li>
 </ul>
 </details>
 <details><summary>Homework Description</summary></details>
