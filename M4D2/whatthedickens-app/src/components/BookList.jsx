@@ -10,7 +10,7 @@ import Scifi from "../json/scifi.json";
 
 class BookList extends Component {
   state = { 
-    categories : [...Fantasy, ...Horror, ...History, ...Romance, ...Scifi]
+    categories :[...Fantasy, ...Horror, ...History, ...Romance, ...Scifi]
   }
   render(){
   return (
@@ -23,7 +23,7 @@ class BookList extends Component {
             title={book.title}
             img={book.img}
             key={book.asin}
-            // category={this.book.categories}
+            category={book.categories}
             price={book.price}
           />
         ))}

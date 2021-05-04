@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Card, Col, Badge } from "react-bootstrap";
 import "./singleBook.css";
 
@@ -26,7 +26,7 @@ function SingleBook(book) {
           <h3>{book.title.length > 50 ? book.title.substr(0,50) +"..." : book.title}</h3>
           <p>{book.asin}</p>
           <h4>${book.price}</h4>
-          <h4>{book.catagory}</h4>
+          <h4>{book.catagories}</h4>
         </Card.Body>
       </Card>
     </Col>
