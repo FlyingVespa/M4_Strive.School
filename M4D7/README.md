@@ -1,11 +1,11 @@
-## Module 4 Day 7 - Homework Brief
+# Module 4 Day 7 - Homework Brief
 
-<hr>
-#### Conditional Rendering
+### Conditional Rendering
 
-###### In these exercises you'll apply your skills creating new rendering conditions for the Strivestaurant project.</em>
+#### In these exercises you'll apply your skills creating new rendering conditions for the Strivestaurant project.</em>
 
 > _Clone the repo to get started ---> [Strivesaurant](https://github.com/irvelervel/mar21-strivestaurant-pt3)_
+
 
 **To Do:**
 
