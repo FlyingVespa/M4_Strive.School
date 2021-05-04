@@ -9,7 +9,7 @@
 
 **To Do:**
 
-- [ ] **1.** Transform DishComments functional component into a class based one.
+- [x] **1.** Transform DishComments functional component into a class based one.
       <br>
 
 - [ ] **2.** In the ReservationForm component make the Form actually visible just after clicking on the h2 above it (use the component state!).
