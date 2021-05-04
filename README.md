@@ -43,7 +43,6 @@ This module is about how to use REACT library for .
 </details>
 <details><summary>Completed Homework Screenshot</summary><p align="center"><img src="./M4D2/M4D2_bookstore.png"/></p></details>
 
-![test!](https://github.com/FlyingVespa/M4_Strive.School/blob/main/M4D2/M4D2_bookstore.png)
 
 ### M4D3
 <hr>
