@@ -8,14 +8,13 @@ This module is about how to use REACT library for .
 <details>
 <summary> *Fullday lecture, no homework. (9-5) Discussed following topics with Stefano Casasola as lecturer* </summary>
 <ul>
-	<li>- Install/Setup React</li>
+	<li>Install/Setup React</li>
 		<ul>
-		<li>versions</li>
-	 	<li>basic packages</li>
-		<li>nodemodules</li>bodytone evo 4 review
-
-		<li>yarn</li>
-		<li>a list!</li>
+			<li>versions</li>
+			<li>basic packages</li>
+			<li>nodemodules</li>
+			<li>yarn</li>
+			<li>a list!</li>
 		</ul>
 	<li> Componets</li>
 	<li>Props</li>
@@ -81,13 +80,13 @@ Solo Rework Attempt:
 	<li>componentDidMount() - <em>Mounting</em></li>
 	<li>componentWillUnmount() - <em>Unmounting</em></li>
 	<li>componentDidUpdate() - <em>Updating</em></li>
-	<li>render() - <em>Updating</em></li>
+	<li>render() - <em>Mounting & Updating</em></li>
 </ul>
 Created a async API fetch, update state. Movies, using dropdown option to select and mount state. 
 </details>
 <details><summary>Homework Description</summary></details>
 
-### M4D7
+### [M4D7]()
 ### M4D8
 ### M4D9
 ### M4D10

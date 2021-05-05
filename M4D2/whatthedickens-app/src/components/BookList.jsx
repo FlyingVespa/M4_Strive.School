@@ -15,7 +15,7 @@ class BookList extends Component {
   render(){
   return (
     <Container>
-      <img className="bgBook" src="./book.jpg" alt="" srcset="" />
+      <img className="bgBook" src={"../assets/img/book.jpg"} alt="book"/>
       <h1 className="text-center">List Of Books</h1>
       <Row className="m-2 no-gutters">
         {this.state.categories.map((book) => (
@@ -23,7 +23,7 @@ class BookList extends Component {
             title={book.title}
             img={book.img}
             key={book.asin}
-            category={book.categories}
+            category={book.category}
             price={book.price}
           />
         ))}
