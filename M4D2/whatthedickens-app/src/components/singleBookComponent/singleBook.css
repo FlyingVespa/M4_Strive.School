@@ -9,7 +9,7 @@
   flex-direction: column;
   justify-content: space-between;
 
-  border: 10px solid black;
+  border: 10px solid ;
   
 
 }
@@ -57,7 +57,7 @@
 .badge {
   position: absolute;
   top: -25px;
-  background: rgb(0, 0, 0);
+
   z-index: -99;
   right: -25px;
   color: #e4e4e4;

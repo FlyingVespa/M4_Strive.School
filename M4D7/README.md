@@ -12,10 +12,10 @@
 - [x] **1.** Transform DishComments functional component into a class based one.
       <br>
 
-- [ ] **2.** In the ReservationForm component make the Form actually visible just after clicking on the h2 above it (use the component state!).
+- [x] **2.** In the ReservationForm component make the Form actually visible just after clicking on the h2 above it (use the component state!).
       <br>
 
-- [ ] **3.** Change MyNavBar component in a class-based one; create a constructor and log a message in the console as the component initializes.
+- [x] **3.** Change MyNavBar component in a class-based one; create a constructor and log a message in the console as the component initializes.
       <br>
 
 - [ ] **4.** In the DishComments component use the ternary operator to show a piece of text instead of the ListGroup if the dish prop is a falsy value.
