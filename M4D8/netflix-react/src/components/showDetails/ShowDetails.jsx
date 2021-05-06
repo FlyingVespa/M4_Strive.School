@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import { Component } from "react";
 import {
   Row,
   Col,
@@ -6,7 +6,7 @@ import {
   ListGroup,
   ListGroupItem,
   Container,
-} from 'react-bootstrap';
+} from "react-bootstrap";
 
 class ShowDetails extends Component {
   state = {
@@ -17,18 +17,18 @@ class ShowDetails extends Component {
   componentDidMount = async (props) => {
     try {
       const response = await fetch(
-        'http://www.omdbapi.com/?apikey=9dd1231b&s=comedy'
+        "http://www.omdbapi.com/?apikey=9dd1231b&s=comedy"
       );
       console.log(response);
       if (response.ok) {
         let data = await response.json();
-        console.log('HERE', data.Search);
+        console.log("HERE", data.Search);
         console.log(this.props.history);
         this.setState({
           movies: data.Search,
         });
       } else {
-        console.log('we got an error');
+        console.log("we got an error");
         this.setState({ isError: true, isLoading: false });
       }
     } catch (error) {
@@ -36,17 +36,17 @@ class ShowDetails extends Component {
       this.setState({ isError: true, isLoading: false });
     }
     let idFromUrl = this.props.match.params.check;
-    console.log('How it looks like', idFromUrl);
-    console.log('MOVIES ARRAY', this.state.movies);
+    console.log("How it looks like", idFromUrl);
+    console.log("MOVIES ARRAY", this.state.movies);
     let foundedMovie = this.state.movies.find(
       (movie) => movie.imdbID === idFromUrl
     );
     if (foundedMovie) {
-      console.log('FOUNDED MOVIE', foundedMovie);
+      console.log("FOUNDED MOVIE", foundedMovie);
       this.setState({
         movieToShow: foundedMovie,
       });
-      console.log('CHECK STATE HERE', this.state);
+      console.log("CHECK STATE HERE", this.state);
     }
   };
 
@@ -89,4 +89,3 @@ class ShowDetails extends Component {
 }
 
 export default ShowDetails;
-© 2021 GitHub, Inc.
