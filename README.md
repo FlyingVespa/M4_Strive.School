@@ -93,8 +93,22 @@ Created a async API fetch, update state. Movies, using dropdown option to select
 <hr>
 
 ### [M4D7]()
+<<<<<<< HEAD
+**Reviewing past topics and Homework Solutions**
+Ternery Operators and chaining them
+States
+how functional- and class components  work, how to write syntax.
+Homework review with Q&A: 
+-Book Project
+    - API fetch
+    - Search Filter
+    - Comment Component
+    - Badge Component (genre color etc)
+
+=======
 
 <hr>
+>>>>>>> 4cb38469299bed52fa0f0aaf90b289bf3b0d2e53
 
 ### M4D8
 
