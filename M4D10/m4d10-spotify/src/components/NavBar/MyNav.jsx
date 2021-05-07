@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Col, Navbar, Nav, Link } from "react-bootstrap";
+import { Container, Col, Navbar, Nav, Link, Listed } from "react-bootstrap";
 import "./MyNav.css";
 
 class MyNav extends React.Component {
@@ -7,52 +7,62 @@ class MyNav extends React.Component {
     return (
       <Container>
         <Col>
-          <Listed.Item>
-            <Link href="https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2">
+          <Nav id="sideNav">
+            <Nav.Link
+              id="navLink"
+              href="https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2"
+            >
               <img
                 src="assets\images\icons\spotify-sidebar-logo.png"
                 class="sidebar-logo"
               />
               Home
-            </Link>
-          </Listed.Item>
-          <Listed.Item>
-            <Link href="HomePage.html" class="greenborder homeGreen">
+            </Nav.Link>
+            <Nav.Link
+              id="navLink"
+              href="HomePage.html"
+              class="greenborder homeGreen"
+            >
               <img
                 class="sidebarIcon"
                 src="assets\images\icons\sidebar-home.png"
               />
               Search
-            </Link>
-          </Listed.Item>
-          <Listed.Item>
-            <Link href="search.html" class="greenborder searchGreen">
+            </Nav.Link>
+            <Nav.Link
+              id="navLink"
+              href="search.html"
+              class="greenborder searchGreen"
+            >
               <img
                 class="sidebarIcon"
                 src="assets\images\icons\sidebar-search.png"
               />
               Search
-            </Link>
-          </Listed.Item>
-          <Listed.Item>
-            <Link type="button" class="btn btn-secondary loginBtn text-dark">
+            </Nav.Link>
+            <Nav.Link
+              id="navLink"
+              type="button"
+              class="btn btn-secondary loginBtn text-dark"
+            >
               Sign Up
-            </Link>
-          </Listed.Item>
-          <Listed.Item>
-            <Link type="button" href="index.html" class="btn btn-dark loginBtn">
+            </Nav.Link>
+            <Nav.Link
+              id="navLink"
+              type="button"
+              href="index.html"
+              class="btn btn-dark loginBtn"
+            >
               Login
-            </Link>
-          </Listed.Item>
-          <Listed.Item>
-            <Link class="cookies p-0">Cookies | Privacy</Link>
-          </Listed.Item>
+            </Nav.Link>
+            <Nav.Link class="cookies p-0">Cookies | Privacy</Nav.Link>
+          </Nav>
         </Col>
       </Container>
     );
   }
 }
-
+export default MyNav;
 // <!DOCTYPE html>
 // <html lang="en">
 
