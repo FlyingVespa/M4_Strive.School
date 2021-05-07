@@ -7,9 +7,7 @@ import { Navbar, Nav } from "react-bootstrap";
 
 class MyNavBar extends Component {
   // const MyNavBar = (props) => (
-  constructor(props) {
-    super(props);
-  }
+
   render() {
     return (
       <Navbar bg="dark" variant="dark" expand="lg">

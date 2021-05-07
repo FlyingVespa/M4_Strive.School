@@ -1,41 +1,4 @@
-## Module 4 Day 2
-
-<hr>
-
-#### Create your first React App!
-
-##### _In this exercise you are going to create your own book store by using React Components!_
-
-<hr>
-
-<strong>_TO DO:_</strong>
-
-- [x] **1.**
-      Install and use the create-react-app boilerplate to create your new react application
-      <br>
-
-- [x] **2.**
-      Install and set up bootstrap + react-bootstrap in your app
-      <br>
-
-- [x] **3.**
-      Create a MyNav component which will render a bootstrap navigation bar with the following links: Home, About and Browse. Note: we don't know how to perform navigation yet, so for now just put "#" as the href for each one on them
-
-- [x] **4.**
-      Create a MyFooter component which will render a footer for the page
-      <br>
-
-- [x] **5.**
-      Create a Welcome component with a Jumbotron and a subtitle for your shop
-      <br>
-
-- [ ] **6.**
-      Create a Latest Release component. This component should read from one of the json files and print out the cover of the books
-
-- [x] **7.**
-      Push everything on GitHub and publish on Eduflow before 17:00 CET
-
-<details><summary># Getting Started with Create React App</summary>
+# Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -105,5 +68,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-</details>

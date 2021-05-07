@@ -1,9 +1,10 @@
-# MODUEL 4 - Introduction to REACT !
+# MODULE 4 - Introduction to REACT !
 
 This module is about how to use REACT library for .
 [TOCM]
 
 ### M4D1
+
 <hr>
 <details>
 <summary> *Fullday lecture, no homework. (9-5) Discussed following topics with Stefano Casasola as lecturer* </summary>
@@ -24,9 +25,11 @@ This module is about how to use REACT library for .
 </details>
 
 ### [M4D2](https://github.com/FlyingVespa/M4_Strive.School/tree/main/M4D2/whatthedickens-app)
+
 <hr>
 
-### <strong>_Delved into Classes</strong> and <strong>States</strong>_
+<strong>_Delved into Classes</strong> and <strong>States</strong>_
+
 <details><summary>More details of lesson contents</summary>
 </details>
 <details>
@@ -42,11 +45,12 @@ This module is about how to use REACT library for .
 </details>
 <details><summary>Completed Homework Screenshot</summary><p align="center"><img src="./M4D2/M4D2_bookstore.png"/></p></details>
 
-
 ### M4D3
+
 <hr>
 
 ### M4D4
+
 <hr>
 ### [M4D5](https://github.com/magdakolaniak/Netflix-react)
 
@@ -70,6 +74,7 @@ Group Attempt:
 Solo Rework Attempt:
 
 </details>
+<hr>
 
 ### M4D6
 
@@ -85,8 +90,10 @@ Solo Rework Attempt:
 Created a async API fetch, update state. Movies, using dropdown option to select and mount state. 
 </details>
 <details><summary>Homework Description</summary></details>
+<hr>
 
 ### [M4D7]()
+<<<<<<< HEAD
 **Reviewing past topics and Homework Solutions**
 Ternery Operators and chaining them
 States
@@ -98,7 +105,35 @@ Homework review with Q&A:
     - Comment Component
     - Badge Component (genre color etc)
 
+=======
+
+<hr>
+>>>>>>> 4cb38469299bed52fa0f0aaf90b289bf3b0d2e53
 
 ### M4D8
+
+Routing
+Route
+
+<hr>
+
 ### M4D9
+
+Recap Day
+
+> - Router
+> - State Elevation
+> -
+
+<strong>Homework: (See revelent folder for full brief)</strong>
+
+- Continue Wokring on Netlfix
+- [Extra] Continue Working on bookstore
+
+<hr>
+
 ### M4D10
+
+Benchmark test
+
+Solo Project
