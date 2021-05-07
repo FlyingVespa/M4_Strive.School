@@ -87,6 +87,18 @@ Created a async API fetch, update state. Movies, using dropdown option to select
 <details><summary>Homework Description</summary></details>
 
 ### [M4D7]()
+**Reviewing past topics and Homework Solutions**
+Ternery Operators and chaining them
+States
+how functional- and class components  work, how to write syntax.
+Homework review with Q&A: 
+-Book Project
+    - API fetch
+    - Search Filter
+    - Comment Component
+    - Badge Component (genre color etc)
+
+
 ### M4D8
 ### M4D9
 ### M4D10
