@@ -2,6 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 //Componets
+import LatestRelease from "./components/latestRelease/LatestRelease.jsx";
 import BookList from "./components/BookList.jsx";
 import MyNavbar from "./components/headerComponent/Nav.jsx";
 import MyFooter from "./components/footerComponent/Footer.jsx";
@@ -14,7 +15,7 @@ const App = () => {
     <div className="App">
       <MyNavbar title="What The Dickens" />
       <MyJumbotron />
-
+      <LatestRelease />
       <BookList />
       <WarningSign text="Oh Dickens, where art thou?" />
       <MyFooter />
