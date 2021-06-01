@@ -1,7 +1,6 @@
 # MODULE 4 - Introduction to REACT !
 
-This module is about how to use REACT library for .
-[TOCM]
+**This module is about how to use REACT library for.**
 
 ### M4D1
 
@@ -93,17 +92,14 @@ Created a async API fetch, update state. Movies, using dropdown option to select
 <hr>
 
 ### [M4D7]()
+
 <<<<<<< HEAD
 **Reviewing past topics and Homework Solutions**
 Ternery Operators and chaining them
 States
-how functional- and class components  work, how to write syntax.
-Homework review with Q&A: 
--Book Project
-    - API fetch
-    - Search Filter
-    - Comment Component
-    - Badge Component (genre color etc)
+how functional- and class components work, how to write syntax.
+Homework review with Q&A:
+-Book Project - API fetch - Search Filter - Comment Component - Badge Component (genre color etc)
 
 =======
 
