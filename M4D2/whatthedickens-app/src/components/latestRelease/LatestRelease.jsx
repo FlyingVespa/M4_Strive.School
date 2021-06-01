@@ -1,19 +1,20 @@
-import {Component} from "react";
-import { Container, Row,  } from "react-bootstrap";
+import { Component } from "react";
+import { Row, Container } from "react-bootstrap";
 import SingleBook from "../singleBookComponent/SingleBook";
 
-import Scifi from "../json/scifi.json";
+import Scifi from "../../json/scifi.json";
 
 class LatestRelease extends Component {
-
   state = {
     featuredBooks: Scifi,
   };
-  render()
-  return {
-  
-         <Row className="m-2 no-gutters">
-          {this.featuredBooks.map((book) => (
+
+  render() {
+    return (
+      <Container>
+        <h2 className="text-center">Featured Books</h2>
+        <Row className="no-gutters">
+          {this.state.featuredBooks.slice(1, 4).map((book) => (
             <SingleBook
               title={book.title}
               img={book.img}
@@ -23,9 +24,9 @@ class LatestRelease extends Component {
             />
           ))}
         </Row>
-    
-
-          }
-};
-
+        ;
+      </Container>
+    );
+  }
+}
 export default LatestRelease;

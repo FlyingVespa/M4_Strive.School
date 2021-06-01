@@ -9,9 +9,7 @@
   flex-direction: column;
   justify-content: space-between;
 
-  border: 10px solid ;
-  
-
+  border: 7px solid;
 }
 .card p {
   font-size: 2rem;
@@ -33,6 +31,7 @@
 }
 .card span {
   font-size: 1rem;
+  background-color: #212529;
 }
 
 .card img {
@@ -40,12 +39,11 @@
   border-top-left-radius: 15px;
   object-fit: cover;
   height: 200px;
-  transition: height 1s ease-in; 
-  
+  transition: height 1s ease-in;
 }
 
 .selectedCard {
-  border: 11px rgb(7, 94, 151) solid;
+  border: 9px rgb(0, 190, 127) solid;
   transform: scale(0.9);
   transition: transform 0.5s ease-in-out;
 }
@@ -68,7 +66,7 @@
 }
 
 .selectedCard > .badge {
-  background: rgb(7, 94, 151);
+  background: rgb(0, 190, 127);
 }
 
 .bgBook {

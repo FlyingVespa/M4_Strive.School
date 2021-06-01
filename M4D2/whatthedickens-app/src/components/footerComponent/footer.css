@@ -6,7 +6,7 @@ footer {
   width: 100%;
   position: fixed;
   height: 50px;
-  background-color: #15477a;
+  background-color: black;
   justify-content: space-around;
   align-items: center;
   animation: focus-in-contract 0.6s ease-out forwards;

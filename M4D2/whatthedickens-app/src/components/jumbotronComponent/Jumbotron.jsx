@@ -1,12 +1,12 @@
-import { Jumbotron, InputGroup, FormControl } from "react-bootstrap";
+import { Jumbotron, InputGroup, FormControl, Image } from "react-bootstrap";
 import "./jumbotron.css";
-
+import bookshelf from "../../assets/img/bookshelf.png";
 const MyJumbotron = () => {
   return (
     <Jumbotron>
       <h1>Ready for your next adventure?</h1>
       <p>Have a look at the folowing books for inspiration.</p>
-      <InputGroup>
+      {/* <InputGroup>
         <FormControl
           placeholder="Search Books by Title"
           aria-label="Search"
@@ -15,7 +15,7 @@ const MyJumbotron = () => {
             this.handleSearchQuery(e.target.value);
           }}
         />
-      </InputGroup>
+      </InputGroup> */}
     </Jumbotron>
   );
 };

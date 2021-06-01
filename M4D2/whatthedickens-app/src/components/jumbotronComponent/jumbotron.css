@@ -3,5 +3,7 @@
 }
 
 .jumbotron {
-  background-color: rgb(192, 214, 228);
+  background-color: rgb(43, 43, 43);
+  border-radius: 0px !important;
+  color: #fff;
 }
