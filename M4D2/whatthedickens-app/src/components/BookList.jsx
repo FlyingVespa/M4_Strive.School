@@ -7,7 +7,10 @@ import History from "../json/history.json";
 import Horror from "../json/horror.json";
 import Romance from "../json/romance.json";
 import Scifi from "../json/scifi.json";
-import book from "./book.jpg";
+
+function shuffle(array) {
+  array.sort(() => Math.random() - 0.5);
+}
 class BookList extends Component {
   state = {
     categories: [...Fantasy, ...Horror, ...History, ...Romance, ...Scifi],
@@ -24,7 +27,7 @@ class BookList extends Component {
     return (
       <Container>
         {/* <Button onClick={this.deselectAllBooks()}>Remove Selc</Button> */}
-        <Image className="bgBook" src={book} alt="book"></Image>
+
         <h2 className="text-center">List Of Books</h2>
         <Row className="m-2 no-gutters">
           {this.state.categories.map((book) => (

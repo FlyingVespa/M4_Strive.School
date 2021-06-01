@@ -6,7 +6,7 @@ footer {
   width: 100%;
   position: fixed;
   height: 50px;
-  background-color: rgb(0, 190, 127);
+  background-color: rgb(0, 220, 140);
   justify-content: space-around;
   align-items: center;
   animation: focus-in-contract 0.6s ease-out forwards;
@@ -30,6 +30,7 @@ footer {
     margin-top: 10px;
     height: 45px;
     margin-right: 10px;
+    filter: drop-shadow(2px 1px 1px white);
   }
 
   .results {

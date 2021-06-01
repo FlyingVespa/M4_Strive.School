@@ -1,3 +1,7 @@
 nav {
-  background-color: black !important;
+  background-color: rgb(10, 10, 10);
+  padding-left: 50px !important;
+}
+nav img {
+  margin-right: 20px;
 }

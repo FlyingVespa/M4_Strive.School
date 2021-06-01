@@ -4,7 +4,7 @@
 
 .jumbotron {
   background-color: rgb(43, 43, 43);
-  /* border-radius: 0px !important; */
+  border-radius: 0px;
   color: #fff;
   border: #fff solid 5px;
   /* border-top: none; */
