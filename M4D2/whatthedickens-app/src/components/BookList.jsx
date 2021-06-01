@@ -7,7 +7,7 @@ import History from "../json/history.json";
 import Horror from "../json/horror.json";
 import Romance from "../json/romance.json";
 import Scifi from "../json/scifi.json";
-import book from "../assets/img/book.jpg";
+import book from "./book.jpg";
 class BookList extends Component {
   state = {
     categories: [...Fantasy, ...Horror, ...History, ...Romance, ...Scifi],

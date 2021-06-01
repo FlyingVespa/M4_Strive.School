@@ -13,7 +13,9 @@ const MyNavbar = (props) => {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link>Home</Nav.Link>
+          <Nav.Link>
+            <i class="bi bi-house-door-fill"></i>Home
+          </Nav.Link>
           <Nav.Link>About</Nav.Link>
           <Nav.Link>Browse</Nav.Link>
         </Nav>

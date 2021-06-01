@@ -1,6 +1,6 @@
 import { Jumbotron, InputGroup, FormControl, Image } from "react-bootstrap";
 import "./jumbotron.css";
-import bookshelf from "../../assets/img/bookshelf.png";
+
 const MyJumbotron = () => {
   return (
     <Jumbotron>
