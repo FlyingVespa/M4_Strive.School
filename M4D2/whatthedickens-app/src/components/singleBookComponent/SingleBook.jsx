@@ -12,6 +12,7 @@ function SingleBook(book) {
   //  book.category === "romance" ? '#fff' :  book.category === "horror" ? "yellow" :  book.category === "scifi" ? "green" :  book.category === "history" ? "orange" : "white"
   return (
     <Col lg={3} md={4} sm={6} className="p-3">
+      <MyBadge category={book.category} />
       <Card
         key={book.asin}
         onClick={selectBook}
@@ -25,7 +26,6 @@ function SingleBook(book) {
               : book.title}
           </h3>
           <h4>${book.price}</h4>
-          <MyBadge category={book.category} />
         </Card.Body>
         <Card.Footer>
           <Button className="btn btn-dark">Add To Cart</Button>
