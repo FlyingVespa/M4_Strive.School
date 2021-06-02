@@ -18,7 +18,7 @@ function SingleBook(book) {
         onClick={selectBook}
         className="h-100 w-100 text-center"
       >
-        <Badge style={{ color: { genreColor } }}>
+        <Badge style={{ backgroundColor: { genreColor } }}>
           {book.category.length === 0 ? "Uncatagorized" : book.category}
         </Badge>
         <Card.Img variant="top" src={book.img} />
