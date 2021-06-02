@@ -1,5 +1,5 @@
 import { Navbar, Nav, Image } from "react-bootstrap";
-import dickenslogo from "../../assets/img/dickenslogo.png";
+// import dickenslogo from "../../assets/img/dickenslogo.png";
 
 import "./Nav.css";
 
@@ -7,7 +7,7 @@ const MyNavbar = (props) => {
   return (
     <Navbar collapseOnSelect expand="lg" variant="dark">
       <Navbar.Brand href="#home">
-        <Image alt="logo" src={dickenslogo} width="30" height="30"></Image>
+        <Image alt="logo" src={props.imgSource} roundedCircle></Image>
         {props.title}
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />

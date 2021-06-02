@@ -31,6 +31,7 @@ footer {
     height: 45px;
     margin-right: 10px;
     filter: drop-shadow(2px 1px 1px white);
+    border: aliceblue solid 3px;
   }
 
   .results {

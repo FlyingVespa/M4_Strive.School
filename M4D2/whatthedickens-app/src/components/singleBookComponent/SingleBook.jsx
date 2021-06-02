@@ -28,7 +28,6 @@ function SingleBook(book) {
               ? book.title.substr(0, 50) + "..."
               : book.title}
           </h3>
-          <p>{book.asin}</p>
           <h4>${book.price}</h4>
         </Card.Body>
         <Card.Footer>

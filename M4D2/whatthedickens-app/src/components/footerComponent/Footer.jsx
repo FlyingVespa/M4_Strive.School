@@ -8,13 +8,13 @@ const MyFooter = () => {
     <footer>
       <div className="footer">
         <a href="https://www.linkedin.com/in/hedrinel/">
-          <img className="icon" src={Insta} alt="" />
+          <img className="icon" src={Insta} alt="" roundedCircle />
         </a>
         <a href="https://https://github.com/FlyingVespa/bookhunterapp">
-          <img className="icon" src={Github} alt="" />
+          <img className="icon" src={Github} alt="" roundedCircle />
         </a>
         <a href="https://www.linkedin.com/in/hedrinel/">
-          <img className="icon" src={Linkd} alt="" />
+          <img className="icon" src={Linkd} alt="" roundedCircle />
         </a>
         <p>Helena Nel &copy;{new Date().getFullYear()} </p>
       </div>

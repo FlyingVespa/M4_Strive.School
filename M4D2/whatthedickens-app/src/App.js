@@ -23,7 +23,7 @@ const imageStyle = {
 const App = () => {
   return (
     <div className="App">
-      <MyNavbar title="What The Dickens" />
+      <MyNavbar imgSource="/dickenslogo.png" title="What The Dickens" />
       <MyJumbotron />
       <Image
         className="bgBook"
