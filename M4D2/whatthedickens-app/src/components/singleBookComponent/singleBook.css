@@ -58,19 +58,18 @@
 
 .badge {
   position: absolute;
-  top: -25px;
-
+  top: -35px;
   z-index: -99;
   right: -25px;
   color: #e4e4e4;
   width: 50%;
   height: 60px;
-  box-shadow: 2px 2px 10px rgb(37, 37, 37);
+  /* box-shadow: 1px 0px 5px 1px rgb(37, 37, 37); */
   border-radius: 10px;
+  border: solid 7px #212529;
 }
-
-.selectedCard > .badge {
-  background: rgb(0, 220, 140);
+.selectedCard .badge {
+  border: solid 9px rgb(0, 220, 140);
 }
 
 .bgBook {

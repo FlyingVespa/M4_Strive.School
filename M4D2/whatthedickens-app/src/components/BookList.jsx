@@ -8,9 +8,6 @@ import Horror from "../json/horror.json";
 import Romance from "../json/romance.json";
 import Scifi from "../json/scifi.json";
 
-function shuffle(array) {
-  array.sort(() => Math.random() - 0.5);
-}
 class BookList extends Component {
   state = {
     categories: [...Fantasy, ...Horror, ...History, ...Romance, ...Scifi],

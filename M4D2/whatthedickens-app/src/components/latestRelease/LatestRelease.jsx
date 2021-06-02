@@ -18,17 +18,29 @@ class LatestRelease extends Component {
             <Carousel>
               {Scifi.slice(25, 32).map((sci, i) => (
                 <Carousel.Item className="p-1">
-                  <img
-                    className="d-block w-100"
-                    src={sci.img}
-                    alt={sci.asin + (i + 1)}
-                  />
-                  <Carousel.Caption>
-                    <h3>{sci.title}</h3>
-                    <p>
-                      Nulla vitae elit libero, a pharetra augue mollis interdum.
-                    </p>
-                  </Carousel.Caption>
+                  <Row>
+                    <Col>
+                      <img
+                        className="d-block w-100"
+                        src={sci.img}
+                        alt={sci.asin + (i + 1)}
+                      />
+                    </Col>
+                    <Col>
+                      <img
+                        className="d-block w-100"
+                        src={sci.img}
+                        alt={sci.asin + (i + 1)}
+                      />
+                    </Col>
+                    <Col>
+                      <img
+                        className="d-block w-100"
+                        src={sci.img}
+                        alt={sci.asin + (i + 1)}
+                      />
+                    </Col>
+                  </Row>
                 </Carousel.Item>
               ))}
             </Carousel>

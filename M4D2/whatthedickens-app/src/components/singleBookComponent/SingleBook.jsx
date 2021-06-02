@@ -1,7 +1,6 @@
 import { Card, Col, Badge, Button } from "react-bootstrap";
-
+import MyBadge from "../badgeComponent/MyBadge";
 import "./singleBook.css";
-
 function selectBook(e) {
   const element = e.currentTarget;
   element.classList.toggle("selectedCard");
@@ -18,17 +17,15 @@ function SingleBook(book) {
         onClick={selectBook}
         className="h-100 w-100 text-center"
       >
-        <Badge style={{ backgroundColor: { genreColor } }}>
-          {book.category.length === 0 ? "Uncatagorized" : book.category}
-        </Badge>
         <Card.Img variant="top" src={book.img} />
         <Card.Body style={{ color: { genreColor } }}>
-          <h3>
+          <h3 style={{ color: "black" }}>
             {book.title.length > 50
               ? book.title.substr(0, 50) + "..."
               : book.title}
           </h3>
           <h4>${book.price}</h4>
+          <MyBadge category={book.category} />
         </Card.Body>
         <Card.Footer>
           <Button className="btn btn-dark">Add To Cart</Button>
