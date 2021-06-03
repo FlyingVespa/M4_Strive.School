@@ -1,75 +1,55 @@
-import React from "react";
-import { Container, Row, InputGroup, FormControl } from "react-bootstrap";
-import SingleBook from "./SingleBook.jsx";
-import SingleComment from "./SingleComment.jsx";
+import { Component } from "react";
+import { Container, Row } from "react-bootstrap";
+import SingleBook from "./singleBookComponent/SingleBook.jsx";
+import Loading from "./Loading.jsx";
 
-import fantasy from "../json/fantasy.json";
-import history from "../json/history.json";
-import horror from "../json/horror.json";
-import romance from "../json/romance.json";
-import scifi from "../json/scifi.json";
+import Fantasy from "../json/fantasy.json";
+import History from "../json/history.json";
+import Horror from "../json/horror.json";
+import Romance from "../json/romance.json";
+import Scifi from "../json/scifi.json";
+// import FilterBooksList from "./FilterBooksList.jsx";
 
-let categories = [fantasy, horror, history, romance, scifi];
-
-class BookList extends React.Component {
-  handleSearchQuery = (searchQuery) => {
-    if (searchQuery) {
-      console.log(searchQuery);
-      let filteredBooks = horror.filter((book) =>
-        book.title.toLowerCase().includes(searchQuery.toLowerCase())
-      );
-      this.setState({ filteredBooks });
-      console.log(filteredBooks);
-    } else {
-      this.setState({ books: this.props.horror });
-    }
-  };
-
+class BookList extends Component {
   state = {
-    selectedBook: horror[0],
+    categories: [...Fantasy, ...Horror, ...History, ...Romance, ...Scifi],
+    query: "",
+    isLoading: true,
   };
 
   render() {
+    {
+      const fetchAllMyBooks = [
+        ...Fantasy,
+        ...Horror,
+        ...History,
+        ...Romance,
+        ...Scifi,
+      ];
+      const parseMyBooks = JSON.parse(fetchAllMyBooks);
+      console.log(parseMyBooks);
+    }
     return (
       <Container>
-        <InputGroup>
-          <FormControl
-            placeholder="Search Books by Title"
-            aria-label="Search"
-            aria-describedby="basic-addon1"
-            onChange={(e) => {
-              this.handleSearchQuery(e.target.value);
-            }}
-          />
-        </InputGroup>
-
-        <h1 className="text-center">List Of Books</h1>
-        <Row>
-          <h2>HORROR</h2>
-          {/* {this.props.genre.map((book) => ( */}
-          <SingleBook genre={this.state.filteredBooks || horror} />
-          {/* ))} */}
-          {/* <h2>SCIFI</h2> */}
-          {/* <SingleBook genre={scifi} />
-          <h2>ROMANCE</h2>
-          <SingleBook genre={romance} />
-          <h2>HISTORY</h2>
-          <SingleBook genre={history} />
-          <h2>FANTASY</h2>
-          <SingleBook genre={fantasy} /> */}
+        <h2 className="text-center mb-5">List Of Books</h2>
+        {this.state.isLoading && <Loading />}
+        <Row className="m-2 no-gutters">
+          {this.state.categories.length === 0 ? (
+            <h4> No Books Found </h4>
+          ) : (
+            this.state.categories.map((book) => (
+              <SingleBook
+                title={book.title}
+                img={book.img}
+                key={book.asin}
+                category={book.category}
+                price={book.price}
+              />
+            ))
+          )}
         </Row>
-        <SingleComment
-          type={this.state.type}
-          year={this.state.year}
-          title={this.state.title}
-          image={this.state.image}
-          selected={this.state.selected}
-          show={this.state.modalShow}
-          onHide={() => this.setState({ modalShow: false })}
-        />
       </Container>
     );
   }
 }
-
 export default BookList;

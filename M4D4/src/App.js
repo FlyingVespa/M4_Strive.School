@@ -1,21 +1,41 @@
-import React from "react";
+import { React } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Image } from "react-bootstrap";
 
+//Componets
+import LatestRelease from "./components/latestRelease/LatestRelease.jsx";
 import BookList from "./components/BookList.jsx";
-import MyNavbar from "./components/Nav.jsx";
-import MyFooter from "./components/Footer";
-import MyJumbotron from "./components/Jumbotron.jsx";
-import WarningSign from "./components/WarningSign.jsx";
+import MyNavbar from "./components/headerComponent/Nav.jsx";
+import MyFooter from "./components/footerComponent/Footer.jsx";
+import MyJumbotron from "./components/jumbotronComponent/Jumbotron.jsx";
+import Comments from "./components/CommentComponent/Comments.jsx";
+
+import WarningSign from "./components/WarningSign";
+import book from "./assets/img/book.jpg";
+
+const imageStyle = {
+  height: "600px",
+  posistion: "sticky",
+  right: -30,
+  bottom: 50,
+  left: "auto",
+};
 
 const App = () => {
   return (
     <div className="App">
-      <MyNavbar title="What The Dickens" />
+      <MyNavbar imgSource="/dickenslogo.png" title="What The Dickens" />
       <MyJumbotron />
-
-      {/* <FilterBookList /> */}
+      <Comments />
+      <WarningSign text="Oh Dickens, where art thou?" />
+      <Image
+        className="bgBook"
+        src={book}
+        alt="book"
+        style={imageStyle}
+      ></Image>
+      <LatestRelease />
       <BookList />
-      <WarningSign />
       <MyFooter />
     </div>
   );
