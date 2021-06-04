@@ -17,6 +17,11 @@ class BookList extends Component {
     isLoading: true,
   };
 
+  componentDidMount = async () => {
+    console.log("ComponentDIdMount");
+    // fetchAlbums();
+  };
+
   render() {
     {
       const fetchAllMyBooks = [
@@ -26,8 +31,8 @@ class BookList extends Component {
         ...Romance,
         ...Scifi,
       ];
-      const parseMyBooks = JSON.parse(fetchAllMyBooks);
-      console.log(parseMyBooks);
+
+      console.log(fetchAllMyBooks);
     }
     return (
       <Container>
