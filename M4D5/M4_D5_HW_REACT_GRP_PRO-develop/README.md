@@ -29,23 +29,19 @@ Original project with all members of group was last submitted on: 04 June 2021 o
 
 ### CURRENT PROJECT STATUS : In progress
 
-<details><Summary>Full summary of homework brief<summary>
-Today your Team Challenge will be about refactoring your previous Netflix project with ReactJS and remote fetchings.__
+<details><Summary><h4>Full summary of homework brief</h4></summary>
 
-API INFO:
+**Today your Team Challenge will be about refactoring your previous Netflix project with ReactJS and remote fetchings.**
 
-Register to http://www.omdbapi.com/
+##### API INFO:
 
-Once registered, you'll receive via email an api key.
-
-The API has a search method:
-
-http://www.omdbapi.com/?apikey=[YOUR API KEYHERE]&s=harry%20potter
-
-This search returns an object like this:
+- Register to http://www.omdbapi.com/
+- Once registered, you'll receive via email an api key.
+- The API has a search method:
+- http://www.omdbapi.com/?apikey=[YOUR API KEYHERE]&s=harry%20potter
 
 <details>
-<summary><em><h5>JSON example</h5></em></summary>   
+<summary><em><h5>This search returns an object like this: JSON example</h5></em></summary>   
 {
 "Search": [
     <ul>
@@ -80,31 +76,32 @@ This search returns an object like this:
 ],</ul>
 <li>"totalResults": "80",</li>
 <li>"Response": "True",</li>
-}</details>
-
+}
+</details>
 --> PLEASE NOTE THAT THE ARRAY WITH THE MOVIES IS INTO THE .Search PROPERTY OF THE RESPONSE <--
 
-### _You have a CRUD endpoint for comments on:_
+<details>
+<summary><h5> _You have a CRUD endpoint for comments on: </h5></summary>
 
 https://striveschool-api.herokuapp.com/api/comments/
 
 This means you can GET, DELETE, POST, PUT data from there.
 
-<details><summary>The Comment structure is this:<summary>
+The Comment structure is this:
+
 <li>{
 "comment": "A good movie but definitely I don't like many parts of the plot",
 "rate": 3,
 "elementId": "tt1756545"
 }</li>
-</details>
 
-Where:
-
+**Where:**
 comment is the text of the comment inserted by the user
 rate is a value between 1 and 5
 elementId is the imdbID of the movie / serie
 
 <hr>
+
 ### Suggested steps:
 
 - [ ] Start from the best old Netflix project your team members achieved in M2 and create the main page (with all the styles and the search bar)
