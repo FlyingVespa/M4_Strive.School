@@ -1,48 +1,39 @@
-import React, { Component, useState } from "react";
-import { Button, Modal, Form } from "react-bootstrap";
+import React, { Component } from "react";
+import { Button, Modal } from "react-bootstrap";
+import "react-responsive-modal/styles.css";
 
-const BackOffice = () => {
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+class BackOffice extends Component {
+  state = {
+    openModal: false,
+  };
 
-  return (
-    <>
-      <Button variant="primary" onClick={handleShow}>
-        Add Comments
-      </Button>
-
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Form>
-            <Form.Group className="mb-3" id="name">
-              <Form.Label>Name</Form.Label>
-              <Form.Control type="text" placeholder="Enter Name" />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Label>Password</Form.Label>
-              <Form.Control type="text" placeholder="Share your thoughts..." />
-            </Form.Group>
-            <Button variant="primary" type="submit">
-              Submit
+  onClickButton = (e) => {
+    e.preventDefault();
+    this.setState({ openModal: true });
+  };
+  onCloseModal = () => {
+    this.setState({ openModal: false });
+  };
+  render() {
+    // const handleClose = () => this.setState({ show: false });
+    // const handleShow = () => this.setState({ show: true });
+    return (
+      <>
+        <button onClick={this.onClickButton}>Click Me</button>
+        <Modal open={this.state.openModal} onClose={this.onCloseModal}>
+          <Modal.Header closeButton>
+            <Modal.Title>Modal heading</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={this.onClose}>
+              Close
             </Button>
-          </Form>
-        </Modal.Body>
-
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
-          </Button>
-        </Modal.Footer>
-      </Modal>
-    </>
-  );
-};
-
+            <Button variant="primary">Save Changes</Button>
+          </Modal.Footer>
+        </Modal>
+      </>
+    );
+  }
+}
 export default BackOffice;
