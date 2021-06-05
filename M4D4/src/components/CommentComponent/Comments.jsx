@@ -5,6 +5,7 @@ import Error from "../Error.jsx";
 
 export default class Comments extends Component {
   state = {
+    // selectedBook: books[0],
     comments: [],
     isLoading: true,
     isError: false,
