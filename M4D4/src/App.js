@@ -1,6 +1,6 @@
-import { React, useState } from "react";
+import { React } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Image, Button } from "react-bootstrap";
+import { Image } from "react-bootstrap";
 
 //Componets
 import LatestRelease from "./components/latestRelease/LatestRelease.jsx";
@@ -9,7 +9,6 @@ import MyNavbar from "./components/headerComponent/Nav.jsx";
 import MyFooter from "./components/footerComponent/Footer.jsx";
 import MyJumbotron from "./components/jumbotronComponent/Jumbotron.jsx";
 import Comments from "./components/CommentComponent/Comments.jsx";
-import BackOffice from "./components/BackOffice.jsx";
 import WarningSign from "./components/WarningSign";
 import book from "./assets/img/book.jpg";
 
@@ -29,7 +28,6 @@ const App = () => {
   return (
     <div className="App">
       <MyNavbar imgSource="/dickenslogo.png" title="What The Dickens" />
-      <BackOffice />
       <MyJumbotron />
       <Comments />
       <WarningSign text="Oh Dickens, where art thou?" />
