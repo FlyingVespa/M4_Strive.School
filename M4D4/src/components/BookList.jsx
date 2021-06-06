@@ -1,5 +1,11 @@
 import { Component } from "react";
-import { Container, Row, InputGroup, FormControl } from "react-bootstrap";
+import {
+  Container,
+  Row,
+  InputGroup,
+  FormControl,
+  Jumbotron,
+} from "react-bootstrap";
 import SingleBook from "./singleBookComponent/SingleBook.jsx";
 import WarningSign from "./WarningSign";
 import Fantasy from "../json/fantasy.json";
@@ -7,8 +13,7 @@ import History from "../json/history.json";
 import Horror from "../json/horror.json";
 import Romance from "../json/romance.json";
 import Scifi from "../json/scifi.json";
-// import FilterBooksList from "./FilterBooksList.jsx";
-
+import "./jumbotron.css";
 class BookList extends Component {
   state = {
     categories: [...Fantasy, ...Horror, ...History, ...Romance, ...Scifi],
@@ -54,32 +59,38 @@ class BookList extends Component {
     console.log("all my books1111", categories);
     // console.log("lenght", categories.length);
     return (
-      <Container>
-        <InputGroup>
-          <FormControl
-            type="text"
-            value={this.state.query}
-            placeholder="Search Books by Title"
-            onChange={(e) => {
-              this.setState({ query: e.target.value });
-            }}
-          />
-        </InputGroup>
-        <h2 className="text-center mb-5">List Of Books</h2>
-        {/* {this.state.isLoading && <Loading />} */}
-        <Row className="m-2 no-gutters">
-          {categories.length === 0 ? (
-            <WarningSign text="Oh Dickens, where art thou?" />
-          ) : (
-            categories &&
-            categories
-              .filter((book) =>
-                book.title.toLowerCase().includes(this.state.query)
-              )
-              .map((book) => <SingleBook b={book} />)
-          )}
-        </Row>
-      </Container>
+      <>
+        <Jumbotron>
+          <h1>Ready for your next adventure?</h1>
+          <p>Have a look at the folowing books for inspiration.</p>
+          <InputGroup>
+            <FormControl
+              type="text"
+              value={this.state.query}
+              placeholder="Search Books by Title"
+              onChange={(e) => {
+                this.setState({ query: e.target.value });
+              }}
+            />
+          </InputGroup>
+        </Jumbotron>
+        <Container>
+          <h2 className="text-center mb-5">List Of Books</h2>
+          {/* {this.state.isLoading && <Loading />} */}
+          <Row className="m-2 no-gutters">
+            {categories.length === 0 ? (
+              <WarningSign text="Oh Dickens, where art thou?" />
+            ) : (
+              categories &&
+              categories
+                .filter((book) =>
+                  book.title.toLowerCase().includes(this.state.query)
+                )
+                .map((book) => <SingleBook b={book} />)
+            )}
+          </Row>
+        </Container>
+      </>
     );
   }
 }

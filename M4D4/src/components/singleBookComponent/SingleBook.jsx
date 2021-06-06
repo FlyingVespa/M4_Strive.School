@@ -14,21 +14,22 @@ class SingleBook extends Component {
     // img: this.props.img,
     // price: this.props.price,
     isSelected: false,
-    selectedBook: {},
     isLoading: true,
   };
   componentDidMount() {
     console.log("Single book", this.props.book);
   }
 
-  selectBook = () => this.setState({ isSelected: false });
+  // selectBook = () => this.setState({ isSelected: false });
 
   render() {
     // const { isLoading, isError } = this.state;
-    const selectBook = (e) => {
-      const element = e.currentTarget;
-      element.classList.toggle("selectedCard");
-    };
+    // const selectBook = (e) => {
+    //   const element = e.current.target;
+    //   element.classList.toggle("selectedCard");
+    // };
+
+    const isSelected = this.state.isSelected;
     return (
       <Col lg={3} md={4} sm={6} className="p-3">
         {/* {this.props.b.length === 0 ? (
@@ -36,8 +37,16 @@ class SingleBook extends Component {
         ) : ( */}
         <Card
           key={this.props.b.asin}
-          onClick={selectBook}
-          className="h-100 w-100 text-center"
+          onClick={() =>
+            this.setState({
+              isSelected: !this.state.isSelected,
+            })
+          }
+          className={
+            isSelected
+              ? "h-100 w-100 text-center selectedCard"
+              : " h-100 w-100 text-center"
+          }
         >
           <MyBadge category={this.props.b.category} />
           <Card.Img variant="top" src={this.props.b.img} />
