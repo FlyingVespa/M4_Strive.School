@@ -11,54 +11,10 @@ import Scifi from "../json/scifi.json";
 
 class BookList extends Component {
   state = {
-    categories: "",
-    // categories: [...Fantasy, ...Horror, ...History, ...Romance, ...Scifi],
+    categories: [...Fantasy, ...Horror, ...History, ...Romance, ...Scifi],
     query: "",
     isLoading: true,
   };
-
-  componentDidMount = async () => {
-    const urlScifi = "../json/scifi.json";
-    // let endpoint = id ? url + id : url;
-
-    const headers = new Headers({
-      "Content-Type": "application/json",
-    });
-
-    console.log("comp did mount");
-
-    try {
-      let resps = await fetch(urlScifi, {
-        "Content-Type": "application/json",
-      });
-
-      let newSifi = await resps.json();
-      this.setState({
-        categories: newSifi,
-        isLoading: false,
-      });
-
-      console.log("Comments Fetched:", newSifi);
-    } catch (error) {
-      console.log(error);
-      this.setState({ isLoading: false, isError: true });
-    }
-  };
-
-  // const fetchAllMyBooks = [
-  //   ...Fantasy,
-  //   ...Horror,
-  //   ...History,
-  //   ...Romance,
-  //   ...Scifi,
-  // ];
-
-  //   console.log(fetchAllMyBooks);
-  //   this.setState({ categories: this.fetchAllMyBooks });
-  //   console.log("ComponentDIdMount");
-
-  //   // fetchAlbums();
-  // };
 
   render() {
     return (
