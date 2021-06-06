@@ -26,7 +26,7 @@ const App = () => {
   return (
     <div className="App">
       <MyNavbar imgSource="/dickenslogo.png" title="What The Dickens" />
-      <Comments />
+      {/* <Comments /> */}
 
       <Image
         className="bgBook"

@@ -17,36 +17,36 @@ class BookList extends Component {
     isLoading: true,
   };
 
-  async fetchbooks() {
-    try {
-      let sci = await require("../json/scifi.json");
-      let his = await require("../json/history.json");
-      let rom = await require("../json/romance.json");
-      let fan = await require("../json/fantasy.json");
-      let hor = await require("../json/horror.json");
-      const bothbooks = await {
-        ...sci,
-        ...his,
-        ...fan,
-        ...rom,
-        ...hor,
-      };
-      console.log("requrie methiod", bothbooks);
-      this.setState({ allmybooks: bothbooks });
+  // async fetchbooks() {
+  //   try {
+  //     let sci = await require("../json/scifi.json");
+  //     let his = await require("../json/history.json");
+  //     let rom = await require("../json/romance.json");
+  //     let fan = await require("../json/fantasy.json");
+  //     let hor = await require("../json/horror.json");
+  //     const bothbooks = await {
+  //       ...sci,
+  //       ...his,
+  //       ...fan,
+  //       ...rom,
+  //       ...hor,
+  //     };
+  //     console.log("requrie methiod", bothbooks);
+  //     this.setState({ allmybooks: bothbooks });
 
-      // console.log(this.allmybooks[0]);
-    } catch (error) {
-      console.log(error);
-      this.setState({
-        isLoading: false,
-        isError: true,
-      });
-    }
-  }
+  //     console.log(this.allmybooks[0]);
+  //   } catch (error) {
+  //     console.log(error);
+  //     this.setState({
+  //       isLoading: false,
+  //       isError: true,
+  //     });
+  //   }
+  // }
 
-  componentDidMount() {
-    this.fetchbooks();
-  }
+  // componentDidMount() {
+  //   this.fetchbooks();
+  // }
 
   render() {
     const { categories } = this.state;
@@ -58,10 +58,10 @@ class BookList extends Component {
         <InputGroup>
           <FormControl
             type="text"
-            value={this.state.searchQuery}
+            value={this.state.query}
             placeholder="Search Books by Title"
             onChange={(e) => {
-              this.setState({ searchQuery: e.target.value });
+              this.setState({ query: e.target.value });
             }}
           />
         </InputGroup>
@@ -71,7 +71,12 @@ class BookList extends Component {
           {categories.length === 0 ? (
             <WarningSign text="Oh Dickens, where art thou?" />
           ) : (
-            categories && categories.map((book) => <SingleBook book={book} />)
+            categories &&
+            categories
+              .filter((book) =>
+                book.title.toLowerCase().includes(this.state.query)
+              )
+              .map((book) => <SingleBook b={book} />)
           )}
         </Row>
       </Container>

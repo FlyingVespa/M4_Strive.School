@@ -31,31 +31,29 @@ class SingleBook extends Component {
     };
     return (
       <Col lg={3} md={4} sm={6} className="p-3">
-        {this.props.book.length === 0 ? (
-          <p>aaaaaaa</p>
-        ) : (
-          // <h2>Oops</h2>
-          <Card
-            key={this.props.book.asin}
-            onClick={selectBook}
-            className="h-100 w-100 text-center"
-          >
-            <MyBadge category={this.props.book.category} />
-            <Card.Img variant="top" src={this.props.book.img} />
-            <Card.Body>
-              <h3>
-                {this.props.book.title.length > 50
-                  ? this.props.book.title.substr(0, 50) + "..."
-                  : this.props.book.title}
-              </h3>
-              <h4>${this.props.book.price}</h4>
-              <h6>{this.props.book.asin}</h6>
-            </Card.Body>
-            <Card.Footer>
-              <Button className="btn btn-dark">Add To Cart</Button>
-            </Card.Footer>
-          </Card>
-        )}
+        {/* {this.props.b.length === 0 ? (
+          <p>Empty</p>
+        ) : ( */}
+        <Card
+          key={this.props.b.asin}
+          onClick={selectBook}
+          className="h-100 w-100 text-center"
+        >
+          <MyBadge category={this.props.b.category} />
+          <Card.Img variant="top" src={this.props.b.img} />
+          <Card.Body>
+            <h3>
+              {this.props.b.title.length > 50
+                ? this.props.b.title.substr(0, 50) + "..."
+                : this.props.b.title}
+            </h3>
+            <h4>${this.props.b.price}</h4>
+            <h6>{this.props.b.asin}</h6>
+          </Card.Body>
+          <Card.Footer>
+            <Button className="btn btn-dark">Add To Cart</Button>
+          </Card.Footer>
+        </Card>
       </Col>
     );
   }
