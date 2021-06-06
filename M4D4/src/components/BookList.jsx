@@ -21,7 +21,7 @@ class BookList extends Component {
     query: "",
     isLoading: true,
   };
-
+  // try to implement this way of fetching??
   // async fetchbooks() {
   //   try {
   //     let sci = await require("../json/scifi.json");
