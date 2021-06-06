@@ -1,7 +1,7 @@
 import { Component } from "react";
 import { Container, Row, InputGroup, FormControl } from "react-bootstrap";
 import SingleBook from "./singleBookComponent/SingleBook.jsx";
-import Loading from "./Loading.jsx";
+import WarningSign from "./WarningSign";
 import Fantasy from "../json/fantasy.json";
 import History from "../json/history.json";
 import Horror from "../json/horror.json";
@@ -11,7 +11,7 @@ import Scifi from "../json/scifi.json";
 
 class BookList extends Component {
   state = {
-    // categories: [...Fantasy, ...Horror, ...History, ...Romance, ...Scifi],
+    categories: [...Fantasy, ...Horror, ...History, ...Romance, ...Scifi],
     allmybooks: null,
     query: "",
     isLoading: true,
@@ -49,9 +49,10 @@ class BookList extends Component {
   }
 
   render() {
-    const { allmybooks } = this.state;
-    console.log("all my books", allmybooks);
-    console.log("all my books1111", allmybooks);
+    const { categories } = this.state;
+    // console.log("all my books", allmybooks);
+    console.log("all my books1111", categories);
+    // console.log("lenght", categories.length);
     return (
       <Container>
         <InputGroup>
@@ -65,18 +66,13 @@ class BookList extends Component {
           />
         </InputGroup>
         <h2 className="text-center mb-5">List Of Books</h2>
-        {this.state.isLoading && <Loading />}
+        {/* {this.state.isLoading && <Loading />} */}
         <Row className="m-2 no-gutters">
-          {this.allmybooks &&
-            this.allmybooks.map((book) => (
-              <SingleBook
-                title={book.title}
-                img={book.img}
-                key={book.asin}
-                category={book.category}
-                price={book.price}
-              />
-            ))}
+          {categories.length === 0 ? (
+            <WarningSign text="Oh Dickens, where art thou?" />
+          ) : (
+            categories && categories.map((book) => <SingleBook book={book} />)
+          )}
         </Row>
       </Container>
     );
