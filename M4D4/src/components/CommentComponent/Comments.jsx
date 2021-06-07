@@ -17,7 +17,8 @@ export default class Comments extends Component {
   };
 
   componentDidMount = async () => {
-    const url = "https://striveschool-api.herokuapp.com/api/comments/";
+    const url =
+      "https://striveschool-api.herokuapp.com/api/comments/" + this.props.asin;
     // let endpoint = id ? url + id : url;
 
     const bearerToken =
@@ -35,13 +36,13 @@ export default class Comments extends Component {
         headers,
       });
 
-      let newComments = await resp.json();
+      let retrievedComments = await resp.json();
       this.setState({
-        comments: newComments,
+        comments: retrievedComments,
         isLoading: false,
       });
 
-      console.log("Comments Fetched:", newComments);
+      console.log("Comments Fetched:", retrievedComments);
     } catch (error) {
       console.log(error);
       this.setState({ isLoading: false, isError: true });
@@ -58,7 +59,7 @@ export default class Comments extends Component {
           {isLoading && <Loading />}
           {isError && <Error />}
           {comments.length === 0 ? (
-            <h4> No Comments yet </h4>
+            <p> No one has a opionon on this book as of yet </p>
           ) : (
             <Card>
               <ListGroup variant="flush">

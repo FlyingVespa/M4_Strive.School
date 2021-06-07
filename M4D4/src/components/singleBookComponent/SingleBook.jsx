@@ -1,6 +1,8 @@
 import { Component } from "react";
 import { Card, Col, Button } from "react-bootstrap";
 import MyBadge from "./MyBadge";
+import CommentArea from "../CommentComponent/CommentArea";
+import Comments from "../CommentComponent/Comments";
 import Loading from "../Loading.jsx";
 import Error from "../Error.jsx";
 
@@ -62,7 +64,9 @@ class SingleBook extends Component {
           <Card.Footer>
             <Button className="btn btn-dark">Add To Cart</Button>
           </Card.Footer>
+          {this.state.isSelected && <Comments />}
         </Card>
+        {this.state.isSelected && <CommentArea />}
       </Col>
     );
   }
