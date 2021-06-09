@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, ListGroup, Card } from "react-bootstrap";
+import { Container, ListGroup, Card, Button } from "react-bootstrap";
 import Loading from "../Loading.jsx";
 import Error from "../Error.jsx";
 
@@ -17,9 +17,9 @@ export default class Comments extends Component {
   };
 
   componentDidMount = async () => {
-    const url = "https://striveschool-api.herokuapp.com/api/comments/";
+    const url =
+      "https://striveschool-api.herokuapp.com/api/comments/" + this.props.asin;
     // let endpoint = id ? url + id : url;
-
     const bearerToken =
       "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGFlNDAyNGNlYWY0ODAwMTVjOTE4NmYiLCJpYXQiOjE2MjIwMzM3OTIsImV4cCI6MTYyMzI0MzM5Mn0.N7an5gYm4hCXi-yxpt6ZfgszaM_66fkx3Ws0xd1zucc";
     const headers = new Headers({
@@ -35,17 +35,35 @@ export default class Comments extends Component {
         headers,
       });
 
-      let newComments = await resp.json();
+      let retrievedComments = await resp.json();
       this.setState({
-        comments: newComments,
+        comments: retrievedComments,
         isLoading: false,
       });
 
-      console.log("Comments Fetched:", newComments);
+      console.log("Comments Fetched:", retrievedComments);
     } catch (error) {
       console.log(error);
       this.setState({ isLoading: false, isError: true });
     }
+
+    // const deleteComment = async (asin) => {
+    //   try {
+    //     let response = await fetch(url + asin, {
+    //       method: "DELETE",
+    //       headers: {
+    //         Authorization: bearerToken,
+    //       },
+    //     });
+    //     if (response.ok) {
+    //       alert("comment deleted!");
+    //     } else {
+    //       alert("comment NOT deleted!");
+    //     }
+    //   } catch (error) {
+    //     alert("comment NOT deleted!");
+    //   }
+    // };
   };
 
   render() {
@@ -58,14 +76,21 @@ export default class Comments extends Component {
           {isLoading && <Loading />}
           {isError && <Error />}
           {comments.length === 0 ? (
-            <h4> No Comments yet </h4>
+            <p> No one has a opionon on this book as of yet </p>
           ) : (
             <Card>
               <ListGroup variant="flush">
                 {comments.map((com) => (
-                  <ListGroup.Item
-                    key={id}
-                  >{`Comment: ${com.comment} + Rating: ${com.rate} + Author: ${com.author}`}</ListGroup.Item>
+                  <ListGroup.Item key={id}>
+                    {`Comment: ${com.comment} + Rating: ${com.rate} + Author: ${com.author}`}{" "}
+                    <Button
+                      variant="danger"
+                      className="ml-2"
+                      onClick={() => deleteComment(com._id)}
+                    >
+                      D
+                    </Button>
+                  </ListGroup.Item>
                 ))}
               </ListGroup>
             </Card>

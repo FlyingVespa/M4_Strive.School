@@ -64,9 +64,9 @@ class SingleBook extends Component {
           <Card.Footer>
             <Button className="btn btn-dark">Add To Cart</Button>
           </Card.Footer>
-          {this.state.isSelected && <Comments />}
+          {/* {this.state.isSelected && <Comments />} */}
+          {this.state.isSelected && <Comments asin={this.props.b.asin} />}
         </Card>
-        {this.state.isSelected && <CommentArea />}
       </Col>
     );
   }
