@@ -1,5 +1,6 @@
 import { Col, Row, Image, Container } from "react-bootstrap";
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 export default class CarouselItem extends Component {
   state = {
@@ -33,14 +34,16 @@ export default class CarouselItem extends Component {
         <Container>
           <Row>
             {this.state.moviesArr.map((movie) => (
-              <Col id="moviecard" className="px-1">
-                <Image
-                  className="coverimage"
-                  src={movie.Poster}
-                  alt={movie.Title}
-                  onClick={this.setState({ selectedTest: e.target.value })}
-                />
-              </Col>
+              <Link to={`details/${movie.imdbID}`}>
+                <Col id="moviecard" className="px-1">
+                  <Image
+                    className="coverimage"
+                    src={movie.Poster}
+                    alt={movie.Title}
+                    // onClick={this.setState({ selectedTest: target.movie.title })}
+                  />
+                </Col>
+              </Link>
             ))}
           </Row>
         </Container>

@@ -67,7 +67,7 @@ class Search extends Component {
               />
 
               <Button variant="outline-secondary" id="button-addon2">
-                Button
+                Search
               </Button>
             </InputGroup>
 

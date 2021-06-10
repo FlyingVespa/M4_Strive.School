@@ -25,7 +25,7 @@ class ShowDetails extends Component {
       if (response.ok) {
         let data = await response.json();
         console.log("HERE", data.Search);
-        console.log(this.props.history);
+        // console.log(this.props.history);
         this.setState({
           movies: data.Search,
         });
@@ -37,6 +37,7 @@ class ShowDetails extends Component {
       console.log(error);
       this.setState({ isError: true, isLoading: false });
     }
+
     let idFromUrl = this.props.match.params.check;
     console.log("How it looks like", idFromUrl);
     console.log("MOVIES ARRAY", this.state.movies);

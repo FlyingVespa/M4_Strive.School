@@ -8,30 +8,35 @@ import Carousel from "./components/carousel/Carousel.jsx";
 import Details from "./components/showDetails/Details";
 import Search from "./components/SearchComponent/Search.jsx";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Registration from "./components/Registration";
 
 function App() {
   return (
     <div className="App">
       {/* <Details /> */}
-      <ShowDetails />
+      {/* <ShowDetails /> */}
+      {/* <Registration /> */}
       <MyNav />
-      <Search />
-      <Carousel />
+
+      {/* <Carousel /> */}
       <Router>
-        <Switch>
-          <Route component={ShowDetails} path="/details/:check" />
-          <Link to="/details/123">Go to details page</Link>
-          <Route
+        {/* <Route component={ShowDetails} path="/details/:check" /> */}
+        <Link to="/details/123">Go to details page</Link>
+        {/* <Route
             render={(routerProps) => (
               <Details
                 selectedMovie={this.state.selectedMovie}
                 {...routerProps}
               />
             )}
-            path="/Details/:id"
-          />
-          <MyFooter />
-        </Switch>
+            path="/Details/:id" */}
+        <Route exact path="/" component={Search} />
+        {/* /> */}
+        <Route exact path="/" component={Carousel} />
+        <Route path="/registration" component={Registration} />
+        <Route path="/showdetails/:movieID" component={ShowDetails} />
+
+        <MyFooter />
       </Router>
     </div>
   );
