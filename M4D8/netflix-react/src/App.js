@@ -1,29 +1,38 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import LoadMovies from "./components/Search/LoadMovies";
 import MyNav from "./components/Navbar/MyNav.jsx";
 import MyFooter from "./components/Footer/MyFooter.jsx";
 import ShowDetails from "./components/showDetails/ShowDetails.jsx";
-import { BrowserRouter as Route } from "react-router-dom";
+// import { Carousel } from "bootstrap";
+import Carousel from "./components/carousel/Carousel.jsx";
+import Details from "./components/showDetails/Details";
+import Search from "./components/SearchComponent/Search.jsx";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
+      {/* <Details /> */}
+      <ShowDetails />
       <MyNav />
-      <Route
-        render={(routerProps) => <LoadMovies genre="comedy" {...routerProps} />}
-        path="/"
-        exact
-      />
-      <Route
-        render={(routerProps) => (
-          <LoadMovies genre="romance" {...routerProps} />
-        )}
-        path="/"
-        exact
-      />
-      <Route component={ShowDetails} path="/details/:check" />
-      <MyFooter />
+      <Search />
+      <Carousel />
+      <Router>
+        <Switch>
+          <Route component={ShowDetails} path="/details/:check" />
+          <Link to="/details/123">Go to details page</Link>
+          <Route
+            render={(routerProps) => (
+              <Details
+                selectedMovie={this.state.selectedMovie}
+                {...routerProps}
+              />
+            )}
+            path="/Details/:id"
+          />
+          <MyFooter />
+        </Switch>
+      </Router>
     </div>
   );
 }

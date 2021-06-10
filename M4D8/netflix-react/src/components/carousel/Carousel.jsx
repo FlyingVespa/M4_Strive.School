@@ -12,9 +12,9 @@ import CarouselItem from "./CarouselItem.jsx";
 function MyCarousel() {
   return (
     <ScrollContainer className="scroll-container">
-      <CarouselItem />
-      <CarouselItem />
-      <CarouselItem />
+      <CarouselItem search="Live" />
+      <CarouselItem search="Love" />
+      <CarouselItem search="Laugh" />
     </ScrollContainer>
   );
 }

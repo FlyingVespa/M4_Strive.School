@@ -15,10 +15,12 @@ class ShowDetails extends Component {
   };
 
   componentDidMount = async (props) => {
+    const APIKEY = "88e0a7be";
+    const API = "http://www.omdbapi.com/";
+    let searchQuery = "";
+
     try {
-      const response = await fetch(
-        "http://www.omdbapi.com/?apikey=9dd1231b&s=comedy"
-      );
+      const response = await fetch(`${API}?apikey=${APIKEY}&s=${searchQuery}`);
       console.log(response);
       if (response.ok) {
         let data = await response.json();
