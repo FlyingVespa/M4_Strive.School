@@ -1,23 +1,24 @@
 import "./App.css";
 // import BackOffice from "./component/BackOffice";
-import Carousell from "./component/Carousell";
-import "./App.css";
-import Search from "./component/SearchComponent/Search";
-import NavbarNetflix from "./component/Navbar/NavbarNetflix";
+import CarouselOfMovies from "./component/CarouselOfMovies.jsx";
+import Search from "./component/SearchComponent/Search.jsx";
+import MyNav from "./component/Navbar/MyNav.jsx";
+import MyFooter from "./component/Footer/MyFooter.jsx";
 // tashed changes
 
 function App() {
   return (
     <div className="App">
-      <NavbarNetflix />
+      <MyNav />
 
       {/* add the book id to this */}
       {/* <BackOffice id="1621579832" /> */}
 
       <Search />
-      <Carousell search={"Harry Potter"} />
-      <Carousell search={"The Lord of the Rings"} />
-      <Carousell search={"Mummy"} />
+      <CarouselOfMovies search={"Harry Potter"} />
+      <CarouselOfMovies search={"The Lord of the Rings"} />
+      <CarouselOfMovies search={"Mummy"} />
+      <MyFooter />
     </div>
   );
 }

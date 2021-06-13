@@ -6,10 +6,6 @@ body {
 .btn-without-outline {
   border: none;
 }
-
-.container {
-  /* border: springgreen solid 5px; */
-}
 .row {
   display: flex;
   overflow-x: scroll !important;
@@ -115,3 +111,14 @@ footer ul li {
 .genre-button {
   margin-left: 4em;
 }
+/* NAV BAR css */
+
+.bg {
+  background-color: black;
+}
+body {
+  font-family: var(--bs-font-sans-serif);
+  font-weight: bolder;
+}
+
+/* TTO REFORMAT CSS */
