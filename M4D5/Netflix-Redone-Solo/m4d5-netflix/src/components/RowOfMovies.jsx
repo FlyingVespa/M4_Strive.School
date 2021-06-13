@@ -38,7 +38,7 @@ export default class RowOfMovies extends Component {
             <Row>
               {movies.slice(0, 6).map((movie) => (
                 <Col>
-                  <Image src={movie.Poster} />
+                  <SingleMovie img={movie.Poster} />
                 </Col>
               ))}
             </Row>
@@ -47,7 +47,7 @@ export default class RowOfMovies extends Component {
             <Row>
               {movies.slice(4, 10).map((movie) => (
                 <Col>
-                  <Image src={movie.Poster} />
+                  <SingleMovie img={movie.Poster} />
                 </Col>
               ))}
             </Row>
